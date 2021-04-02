@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Lat:300o&family=Roboto:wght@400;500&display=swap');
+
+*,
+.root {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.root {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+body {
+	background-color: #101114;
+	font-family: Helvetica, sans-serif;
+	box-sizing: border-box;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+i {
+	cursor: pointer;
+}
+main,
+.screen {
+	min-height: 100vh;
+	width: 100%;
+	box-sizing: border-box;
+}
+img {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	object-fit: cover;
+}
+.hero,
+.slides {
+	height: 100vh;
+	width: 100%;
+}
+.slides {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.slides .sliders {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 2;
+}
+.slides button {
+	background: none;
+	border: none;
+	padding: 1em;
+	z-index: 2;
+}
+.next {
+	justify-self: flex-end;
+}
+.prev {
+	justify-self: flex-start;
+}
+.slides i {
+	font-size: 3em;
+	color: white;
+}
+.intro {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	height: 40%;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 0 3em 0 3em;
+	z-index: 1;
+	color: white;
+}
+.intro h1 {
+	font-size: 3em;
+}
+.intro p {
+	width: 45%;
+	font-size: 1.5em;
+	text-align: center;
+}
+nav {
+	position: fixed;
+	z-index: 3;
+	color: white;
+}
+nav a {
+	color: white;
+}
+nav a:hover {
+	color: dodgerblue;
+}
+
+nav .content {
+	width: 0;
+	transition: width 2s, height 2s;
+	transition-timing-function: ease;
+}
+nav .visible {
+	background-color: black;
+	border-radius: 100%;
+	margin: -5em 0 0 -3em;
+	width: 27em;
+	height: 27em;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+nav ul {
+	font-size: 2em;
+	margin-top: 2em;
+	margin-left: 3em;
+}
+nav .hidden {
+	width: 0;
+	height: 0;
+	background-color: none;
+}
+nav ul {
+	list-style: none;
+}
+nav li {
+	margin-bottom: 0.2em;
+}
+nav i {
+	font-size: 2em;
+	margin: 1em 0.5em 0 1em;
+}
+nav p {
+	font-size: 2em;
+	margin-top: 1em;
+	text-align: center;
+}
+nav > div:first-child {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+}
+.visible {
+	visibility: visible;
+}
+.hidden {
+	visibility: hidden;
+}
+button:focus {
+	border: none;
+}
+
+/* Perks screen */
+.yellow {
+	background: #ffb33f;
+	height: 100vh;
+	width: 100%;
+}
+/* .yellow .bg-circle {
+	background: blue;
+	width: 20em;
+	height: 20em;
+	position: absolute;
+	 opacity: 0; */
+.yellow > div {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 50%;
+	height: 40%;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	left: 50%;
+	top: 35%;
+	/* transform: translate(-50%, -50%); */
+	color: white;
+}
+.yellow h1 {
+	font-size: 3.5em;
+}
+.yellow p {
+	font-size: 3em;
+	width: 90%;
+	color: black;
+}
+.screen .btn {
+	position: absolute;
+	right: 0;
+	padding: 2em 1em 0 0;
+}
+
+.ysection img {
+	clip-path: circle(10em at 30% 60%);
+}
+
+/* Speaker screen */
+.speaker .red {
+	background: #d34848;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+}
+
+.red > div {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 50%;
+	height: 40%;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	top: 50%;
+	left: 30%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+	color: white;
+}
+.red h1 {
+	font-size: 3.5em;
+}
+.red p {
+	font-size: 3em;
+	width: 90%;
+	color: black;
+}
+
+img.spkr-one,
+img.spkr-two {
+	position: relative;
+	width: 15em;
+	height: 20em;
+	align-self: center;
+	justify-self: flex-end;
+}
+img.spkr-one {
+	align-self: flex-start;
+	margin: 8em 0 0 8em;
+}
+img.spkr-two {
+	align-self: center;
+	margin: 4em 0 0 -1em;
+}
+.sound-btn {
+	position: relative;
+	left: 70%;
+	width: 5em;
+	height: 5em;
+	font-size: 1.5em;
+	background: none;
+	border: white solid 0.1em;
+	margin-top: -12.5em;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	z-index: 2;
+}
+
+.sound-btn:hover {
+	border-color: dodgerblue;
+	color: black;
+}
+.sound-btn:active {
+	border-radius: 100%;
+	border-color: dodgerblue;
+	color: black;
+}
+
+/* Perks section */
+
+.perks .black {
+	background: #191919;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-left: 5em;
+	justify-content: center;
+	align-items: flex-start;
+}
+.black h1 {
+	color: white;
+	margin-bottom: 1em;
+	font-size: 3em;
+}
+.black .details {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 85%;
+}
+
+.sm-box {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+}
+
+.sm-box > span {
+	height: 0.2em;
+	width: 4em;
+	margin-bottom: 1em;
+}
+.sm-box h2 {
+	font-size: 2em;
+	margin-bottom: 0.5em;
+}
+.sm-box p {
+	font-size: 1.5em;
+	color: white;
+}
+
+/* Blue Section */
+.blue {
+	background: #1fe1e9;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	padding-left: 5em;
+	justify-content: center;
+	align-items: center;
+}
+.blue > div.reviews,
+.blue > div.spkrs {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding-top: 4em;
+}
+.blue img {
+	position: relative;
+	width: 20em;
+	height: 12em;
+}
+.blue img:nth-child(2) {
+	margin-left: 2em;
+}
+
+.blue h1 {
+	color: white;
+	margin-bottom: 1em;
+	font-size: 3em;
+}
+.blue .details {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 85%;
+}
+
+.blue .h2 {
+	color: white;
+}
+.sm-box > div {
+	display: flex;
+	width: 7em;
+	margin-bottom: 1em;
+	justify-content: space-evenly;
+}
+
+/* Final section */
+.final-black {
+	height: 60vh;
+	width: 100%;
+	background: #191919;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+}
+.final-purple {
+	height: 40vh;
+	width: 100%;
+	background: #5e33d1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.final-black > div,
+.final-purple > div {
+	display: flex;
+	flex-direction: column;
+	margin-left: 3em;
+}
+.final-purple > div {
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.final-black h1 {
+	color: #d34848;
+	font-size: 3.5em;
+}
+.final-black .btn {
+	margin-right: 10em;
+}
+.final-black h2 {
+	font-size: 3em;
+}
+
+.final-purple p.mail {
+	font-size: 1.5em;
+	margin-bottom: 1em;
+	align-self: flex-start;
+}
+
+.final-purple h2 {
+	font-size: 2.5em;
+	margin-bottom: 1em;
+}
+
+/* Pricing screen */
+.prices .black {
+	background: #191919;
+	height: 130vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-left: 5em;
+	justify-content: center;
+	align-items: center;
+}
+
+.black ul {
+	list-style-type: disc;
+	margin-bottom: 1em;
+}
+.black .sm-box > span {
+	width: 6em;
+	margin-bottom: 1em;
+}
+.black ul + div {
+	margin-left: 1em;
+}
+.black > div > p {
+	font-size: 2em;
+	margin-bottom: 2em;
+	color: white;
+}
+
+.sm-box h3 {
+	font-size: 5em;
+	margin-bottom: 0.5em;
+}
+.sm-box li {
+	font-size: 1.5em;
+	color: white;
+}
+
+/* Payment Screen */
+.payment {
+	background: white;
+	height: 140vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-left: 5em;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.payment h1 {
+	color: black;
+	font-size: 3.5em;
+	margin-bottom: 1.5em;
+}
+
+.select-payment {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 70%;
+	margin-bottom: 7em;
+}
+.payment p {
+	font-size: 2em;
+	margin-bottom: 1em;
+}
+.select-payment ul {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 1em;
+	width: 70%;
+	list-style-type: circle;
+	font-size: 1.9em;
+}
+.select-payment li {
+	display: flex;
+}
+li > input {
+	font-size: 0.4em;
+	width: 2em;
+	margin-right: 1em;
+}
+.info {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.credit-card,
+.billing {
+	width: 40%;
+}
+
+.credit-card {
+	margin-right: 8em;
+}
+
+.row {
+	display: flex;
+	flex-direction: column;
+}
+
+.row label {
+	font-size: 0.8em;
+	margin-bottom: 0.5em;
+	font-weight: bolder;
+}
+
+input {
+	width: 30em;
+	height: 3em;
+	margin-bottom: 1.5em;
+	border: 0.1em solid black;
+}
+.sm-input {
+	width: 14em;
+}
+.bg-row {
+	display: flex;
+	justify-content: space-between;
+	justify-self: flex-start;
+	width: 25em;
+}
+input:focus {
+	border: black;
+	border-bottom: 0.4em solid #2f1fe9;
+}
+.terms {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 25em;
+	margin-top: 2em;
+}
+.terms p > span {
+	color: #2f1fe9;
+}
+.terms p {
+	margin-bottom: 1em;
+	font-size: 1em;
+}

@@ -1,0 +1,59 @@
+.grd-btn {
+	width: 12em;
+	height: 3em;
+	border-radius: 4em;
+	overflow: hidden;
+	border: none;
+	background: linear-gradient(
+		-46deg,
+		lightgreen,
+		red,
+		dodgerblue,
+		brown,
+		green
+	);
+	background-size: 400% 400%;
+	animation-delay: 0s;
+	animation: colours 10s ease infinite;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.2em;
+}
+.grd-btn > a {
+	color: white;
+	background: none;
+	border-radius: 4em;
+	font-size: 1.2em;
+	font-weight: bolder;
+	border: none;
+}
+.grd-btn:hover {
+	background: linear-gradient(-46deg, red, white, purple, maroon, dodgerblue);
+	background-size: 400% 400%;
+	animation: colours 10s ease infinite;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+}
+@keyframes colours {
+	0% {
+		background-position: 0 50%;
+	}
+	20% {
+		background-position: 50% 0%;
+	}
+	40% {
+		background-position: 100% 50%;
+	}
+	60% {
+		background-position: 50% 100%;
+	}
+	80% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 60% 100%;
+	}
+}
